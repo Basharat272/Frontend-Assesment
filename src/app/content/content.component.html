@@ -1,0 +1,24 @@
+<div class="content">
+    <div class="search-bar">
+      <label for="search-input" class="search-label">Search</label>
+      <input id="search-input" type="text" placeholder="Search items..." />
+    </div>
+    <div>
+      <strong>Applied Filters: </strong>
+      <span>
+        <button class="filter-button">
+          e-voucher <span class="cross-sign">✖</span>
+        </button>
+      </span>
+      <span>
+        <button class="filter-button">
+          clear filter <span class="cross-sign">✖</span>
+        </button>
+      </span>
+    </div>
+    <div class="columns">      
+      <app-categories class="left-column"></app-categories>
+      <app-items class="right-column"></app-items>
+    </div>
+  </div>
+  

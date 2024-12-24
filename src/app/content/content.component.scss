@@ -1,0 +1,46 @@
+.search-bar {
+    margin-bottom: 1rem;
+  
+    .search-label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      color: #333; 
+    }
+  
+    input {
+      width: 100%;
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  }
+
+  .filter-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem; 
+    background: none;
+    border: none;
+    color: gray;
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 0.2rem 0.5rem; 
+  }
+  
+  .filter-button:hover {
+    color: darkgray; 
+  }
+  
+  .cross-sign {
+    font-size: 0.8rem;
+    margin-left: auto;
+  }
+  
+  span {
+    margin-right: 0.5rem; 
+  }
+  
+  

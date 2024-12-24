@@ -1,0 +1,29 @@
+<div class="sort-popup" [class.show]="isVisible">
+    <div class="sort-popup-content">
+      <div class="sort-options">
+        <div class="sort-left">
+          <label class="filter-label">Filter by</label>
+        </div>
+  
+        <div class="sort-right">
+          <label (click)="onReset()" class="reset-label">Reset all</label>
+        </div>
+      </div>
+      
+      <hr class="divider" />
+  
+      <div class="sort-right">
+        <strong>Sort</strong>
+      </div>
+  
+      <div class="buttons">
+        <button (click)="onSort('asc')" class="button">A-Z</button>
+        <button (click)="onSort('desc')" class="button">Z-A</button>
+      </div>
+  
+      <div class="footer">
+        <button (click)="applySort()" class="apply-btn">Apply</button>
+      </div>
+    </div>
+  </div>
+  

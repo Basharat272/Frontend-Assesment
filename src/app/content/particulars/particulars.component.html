@@ -1,0 +1,43 @@
+<div class="items">
+  <div class="header">
+    <span class="item-count"><strong>{{ items.length }} results found</strong></span>
+    <button (click)="toggleSortPopup()" class="sort-btn">Sort</button>
+  </div>
+
+  <app-sort-popup [isVisible]="showSortPopup" (sortChanged)="handleSortChanged($event)"></app-sort-popup>
+
+  <div class="item-container">
+    <div class="item" *ngFor="let item of items">
+      <div class="item-img-container">
+        <img [src]="item.display_img_url || 'assets/placeholder.png'" alt="Item Image" class="item-img" />
+        <p *ngIf="item.quantity > 0 && item.quantity <= item.low_quantity" class="high-demand">
+          <span class="demand-text">On High Demand</span>
+          <br />
+          <span class="quantity-text">(Only {{ item.quantity }} left)</span>
+        </p>
+      </div>
+      <div class="item-details">
+        <h4>{{ item.name }}</h4>
+        <p *ngIf="item.quantity != 0">Points: {{ item.points }}</p>
+        <p *ngIf="item.quantity === 0">Out of Stock</p>
+      </div>
+
+      <hr class="item-divider">
+
+      <div class="validity">
+        <span class="validity-text">
+          <!-- <span *ngIf="item.valid_until">Valid until : </span> -->
+          <span>{{item.valid_until ? 'Valid until' : ''}} </span>
+        </span>
+        <span>{{ item.valid_until | date: 'dd-MM-yyyy' }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="page-display">
+      <button>15</button>
+      <span class="per-page-text">per page</span>
+    </div>
+  </div>
+</div>
